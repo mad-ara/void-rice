@@ -1,0 +1,13 @@
+*************
+* icons.svg *
+*************
+
+Original colored icons in Inkscape are hard to identify in dark themes. The file "icon.svg" contains bright icons.
+To use them in Inkscape, they must be stored in this directory:
+
+~/.config/inkscape/icons/icons.svg
+
+
+Known issue:
+Not all symbols can be customized because Inkscape partly uses standard GTK symbols.
+https://bugs.launchpad.net/inkscape/+bug/789804

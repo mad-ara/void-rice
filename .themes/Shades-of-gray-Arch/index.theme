@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Shades-of-gray-Arch
+Comment=A flat dark theme with ergonomic contrasts
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Shades-of-gray-Arch
+IconTheme=gnome
+ButtonLayout=menu:minimize,maximize,close
+

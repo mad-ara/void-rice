@@ -1,0 +1,1322 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*******************************************
+	 Name: Shades of gray GTK3 Theme
+	 Author: WernerFP
+	 License: GPL-3.0+
+*******************************************/
+
+:root {
+
+	/****** Shades of gray theme colors ******/
+
+	/* Shades of gray: */
+	/*--base_bg_selected: #787878;*/
+
+	/* Orient blue: */
+	/*--base_bg_selected: #1B779E;*/
+
+	/* Cerulean blue:; */
+	/*--base_bg_selected: #6484a4;*/
+
+	/* Arch blue: */
+	/*--base_bg_selected: #1F77B7;*/
+
+	/* Patina green: */
+	/*--base_bg_selected: #3c7460;*/
+
+	/* Firebrick: */
+	/*--base_bg_selected: #c14e4e;*/
+
+	/* Harvest: */
+	--base_bg_selected: #AD8641;
+
+	/*****************************************/
+
+	/* Base */
+	--base_dark_color:               #373737;
+	--base_color:                    #515151;
+	--base_fg:                       #f5f5f5;
+	--base_bg:                       #404040;
+	--base_fg_selected:              #ffffff;
+	--base_fg_insens:                #a3a3a3;
+
+	/* Borders */
+	--borders:                       #191919;
+	--borders_separator:             #575757;
+
+	/* Sidebar */
+	--sidebar_fg:                    rgba(255, 255, 255, 0.75);
+	--sidebar_bg_hover:              rgba(128, 128, 128, 0.32);
+	--sidebar_bg:                    #3a3a3a;
+
+	/* Treeview */
+	--treeview_header_bg:            #303030;
+	--treeview_header_bg_hover:      #282828;
+	--treeview_header_fg:            rgba(255, 255, 255, 0.6);
+	--treeview_header_fg_hover:      rgba(255, 255, 255, 0.9);
+	--treeview_row_bg:               #535353;
+	--treeview_row_bg_even:          #474747;
+	--treeview_row_hover_line:       #929292;
+
+	/* Buttons */
+	--button_bg:                     #575757;
+	--button_bg_hover:               #696969;
+	--button_bg_active:              #757575;
+	--button_bg_disabled:            #464646;
+	--borders_active:                #999999;
+
+	/* Entries */
+	--entry_bg:                      #515151;
+	--entry_bg_focus:                #3a3a3a;
+
+	/* Tabs */
+	--tab_bg:                        #595959;
+	--tab_fg_insens:                 #afafaf;
+
+	/* Infobar */
+	--infobar_bg:                    #828282;
+
+	/* Dark Theme colors */
+	--theme-highlight-green:        #66b266 !important;
+	--theme-highlight-blue:         #6abfe8 !important;
+	--theme-highlight-bluegray:     #8eabc7 !important;
+	--theme-highlight-purple:       #bcb8db !important;
+	--theme-highlight-lightorange:  #e0af52 !important;
+	--theme-highlight-orange:       #e08453 !important;
+	--theme-highlight-red:          #ed6477 !important;
+	--tree-link-color:              #6abfe8 !important;
+	--theme-highlight-pink:         #ebb2ff !important;
+	--theme-highlight-gray:         #e9f4fe !important;
+	--darkgreen:                    #468f46;
+
+ 	--toolbarbutton-hover-background: rgba(200, 200, 200, .2) linear-gradient(rgba(200, 200, 200, .2), rgba(200, 200, 200, .1)) !important;
+	--toolbarbutton-hover-bordercolor: rgba(200, 200, 200, .5) !important;
+	--toolbarbutton-header-bordercolor: rgba(0, 0, 0, .25);
+	--toolbarbutton-hover-boxshadow: none !important;
+
+	--toolbarbutton-active-background: rgba(200, 200, 200, .3) linear-gradient(rgba(200, 200, 200, .2), rgba(200, 200, 200, .15)) !important;
+	--toolbarbutton-active-bordercolor:  rgba(200, 200, 200, .6) !important;
+	--toolbarbutton-active-boxshadow: none !important;
+}
+
+minimonth {
+/* Workaround Lightning accessibilty bug: system theme must be forced */
+	--mmMainBackground: -moz-field !important;
+	--mmBoxBackground: -moz-Dialog !important;
+	--mmBoxBorderColor: ThreeDShadow !important;
+	--mmDayColor: WindowText !important;
+	--mmDayBorderColor: Window !important;
+	--mmDayOtherColor: GrayText !important;
+	--mmDayOtherBackground: ButtonFace !important;
+	--mmDayOtherBorderColor: Transparent !important;
+	--mmDayTodayBackground: -moz-field !important;
+	--mmDayTodayBorderColor: Highlight !important;
+	--mmDaySelectedColor: HighlightText !important;
+	--mmDaySelectedBackground: Highlight !important;
+	--mmDaySelectedBorderColor: ButtonFace !important;
+	--mmDaySelectedTodayBackground: Highlight !important;
+	--mmDaySelectedTodayBorderColor: ButtonFace !important;
+}
+/* Workaround Lightning (6.2): bright navigation buttons */
+.minimonth-nav-btns {
+
+  list-style-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCA1IDEzIiB3aWR0aD0iNSIgaGVpZ2h0PSIxMyI+PGRlZnM+PGNsaXBQYXRoIGlkPSJfY2xpcFBhdGhfSXdrcjdCbDRMb0l0SzNjVW5NN014aFQxemtZSGg2bXoiPjxyZWN0IHdpZHRoPSI1IiBoZWlnaHQ9IjEzIi8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF9Jd2tyN0JsNExvSXRLM2NVbk03TXhoVDF6a1lIaDZteikiPjxwYXRoIGQ9IiBNIDAgMiBMIDUgNi41IEwgMCAxMSBMIDAgMiBaICIgZmlsbD0icmdiKDI0NSwyNDUsMjQ1KSIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZT0icmdiKDI0NSwyNDUsMjQ1KSIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1taXRlcmxpbWl0PSI0Ii8+PC9nPjwvc3ZnPg==') !important;
+}
+.minimonth-nav-btns[dir="0"] {
+
+  list-style-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAxMSAxMyIgd2lkdGg9IjExIiBoZWlnaHQ9IjEzIj48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF9KenJvQnpjS09EQW9mRlFmYkFBaW92eUhQNUdFQmJJaCI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjEzIi8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF9KenJvQnpjS09EQW9mRlFmYkFBaW92eUhQNUdFQmJJaCkiPjxwYXRoIGQ9IiBNIDkuNjcgNi41IEMgOS42NyA4Ljc2NCA3LjgwMyAxMC42IDUuNSAxMC42IEMgMy4xOTcgMTAuNiAxLjMzIDguNzY0IDEuMzMgNi41IEMgMS4zMyA0LjIzNiAzLjE5NyAyLjQgNS41IDIuNCBDIDcuODAzIDIuNCA5LjY3IDQuMjM2IDkuNjcgNi41IFogIiBmaWxsPSJub25lIiB2ZWN0b3ItZWZmZWN0PSJub24tc2NhbGluZy1zdHJva2UiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJyZ2IoMjQ1LDI0NSwyNDUpIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLW1pdGVybGltaXQ9IjQiLz48L2c+PC9zdmc+') !important;
+}
+.view-navigation-button,
+.view-navigation-button:hover {
+
+  list-style-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAxMSAxMSIgd2lkdGg9IjExIiBoZWlnaHQ9IjExIj48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF84RWl2WFRIWVJDbTdaeWZ3VFRoMk1URWpSVlZEZmNFUCI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIi8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF84RWl2WFRIWVJDbTdaeWZ3VFRoMk1URWpSVlZEZmNFUCkiPjxwYXRoIGQ9IiBNIDEgMSBMIDEwIDUuNSBMIDEgMTAgTCAxIDEgWiAiIGZpbGw9InJnYigyNDUsMjQ1LDI0NSkiLz48L2c+PC9zdmc+') !important;
+}
+
+/******************************************/
+/*************** Decoration ***************/
+/******************************************/
+
+#MsgHeadersToolbar,
+#quick-filter-bar,
+statusbarpanel,
+statusbar {
+
+	-moz-appearance: none !important;
+	background-image: none !important;
+	background-color: var(--base_bg) !important;
+	box-shadow: none !important;
+}
+.statusbar-resizerpanel {
+	display: none !important;
+}
+rezsizer {
+
+	-moz-appearance: none !important;
+	display: none !important;
+}
+menuseparator {
+
+	-moz-appearance: none !important;
+	background-color: transparent !important;
+}
+listbox {
+
+	-moz-appearance: none !important;
+	border: none !important;
+	background-color: var(--base_bg) !important;
+}
+
+/******************************************/
+/***************** Tabbox *****************/
+/******************************************/
+
+tabbox tabs tab {
+
+	-moz-appearance: none !important;
+	padding: 4px 10px 4px !important;
+	color: var(--tab_fg_insens) !important;
+	border: none !important;
+	border-left: 1px solid rgba(0, 0, 0, 0.6) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.6) !important;
+	border-right: 1px solid rgba(0, 0, 0, 0.6) !important;
+	border-top-left-radius: 3px !important;
+	border-top-right-radius: 3px !important;
+}
+tabbox tabs tab:hover {
+
+	color: var(--base_fg_selected) !important;
+	background-color: rgba(128, 128, 128, 0.2) !important;
+}
+tabbox tabs tab[selected="true"],
+tabbox tabs tab[selected="true"]:hover {
+
+	color: var(--base_fg_selected) !important;
+	background: linear-gradient(to bottom, rgba(128,128,128,0.3), var(--base_bg)) !important;
+}
+
+/******************************************/
+/***************** Toolbox ****************/
+/******************************************/
+
+@media(-moz-windows-glass:0) {
+
+	#navigation-toolbox {
+
+		-moz-appearance: none !important;
+		background-color: var(--base_bg) !important;
+	}
+}
+#compose-toolbox,
+#compose-toolbox > *,
+#tab-toolbox,
+.chromeclass-menubar {
+
+	-moz-appearance: none !important;
+	background-color: var(--base_dark_color) !important;
+}
+.mail-toolbox {
+
+	-moz-appearance: none !important;
+	background-color: var(--tab_bg) !important;
+	box-shadow: none !important;
+	background-image: none !important;
+}
+.mail-toolbox .chromeclass-toolbar,
+.mail-toolbox .chromeclass-toolbar > *,
+.mail-toolbox .chromeclass-toolbar .toolbarbutton-text {
+
+	color: var(--base_fg) !important;
+}
+toolbarseparator {
+
+	opacity: 0.4 !important;
+}
+
+/******************************************/
+/****************** Tabs ******************/
+/******************************************/
+
+.tabmail-tab .tab-background {
+
+	-moz-appearance: none !important;
+	opacity: 0 !important;
+	background-color: none !important;
+
+}
+.tabmail-tab .tab-content {
+
+	padding-bottom: 3px !important;
+}
+.tabmail-tab .tab-content label {
+
+	color: var(--tab_fg_insens) !important;
+}
+.tabmail-tab:hover .tab-content label,
+.tabmail-tab[selected="true"] .tab-content label,
+.tabmail-tab[selected="true"]:hover .tab-content label {
+
+color: var(--base_fg_selected) !important;
+}
+.tabmail-tab .tab-content {
+
+	-moz-appearance: none !important;
+	color: var(--tab_fg_insens) !important;
+}
+.tabmail-tab:hover .tab-content {
+
+	-moz-appearance: none !important;
+	background-color: rgba(128, 128, 128, 0.2)!important;
+	border: none !important;
+}
+.tabmail-tab[selected="true"] .tab-content,
+.tabmail-tab[selected="true"]:hover .tab-content {
+
+	-moz-appearance: none !important;
+	background-color: #595959 !important;
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+	border-top: 2px solid var(--base_bg_selected) !important;
+	border-left: 1px solid var(--borders) !important;
+	border-right: 1px solid var(--borders) !important;
+	border-bottom: 1px solid #595959 !important;
+	margin-bottom: 0 !important;
+}
+
+/******************************************/
+/***************** Entries ****************/
+/******************************************/
+
+textbox .uri-element,
+.searchBox,
+#view-task-edit-field,
+#unifinder-task-edit-field,
+.textbox-addressingWidget {
+
+	-moz-appearance: none !important;
+	min-height: 26px !important;
+	padding-left: 8px !important;
+	background-color: var(--entry_bg) !important;
+	border: 1px solid var(--borders) !important;
+	border-radius: 3px !important;
+	transition: none !important;
+}
+textbox .uri-element[focused="true"],
+.searchBox[focused="true"],
+#view-task-edit-field[focused="true"],
+#unifinder-task-edit-field[focused="true"],
+.textbox-addressingWidget[focused="true"] {
+
+	-moz-appearance: none !important;
+	border: 1px solid var(--borders) !important;
+	border-radius: 3px !important;
+	background-color: var(--entry_bg_focus) !important;
+	box-shadow: inset 1px 0 var(--borders_active),
+		inset -1px 0 var(--borders_active),
+		inset 0 1px var(--borders_active),
+		inset 0 -1px var(--borders_active) !important;
+	outline: none;
+}
+placesholder {
+
+	background-color: transparent !important;
+}
+textbox[nomatch="true"][highlightnonmatches="true"] {
+
+	color: var(--theme-highlight-red) !important;
+}
+
+/******************************************/
+/**************** Buttons *****************/
+/******************************************/
+
+button:not(.spinbuttons-button):not(#MFFABsearchButton) {
+
+	min-height: 27px !important; /* Thunderbird 52 issue - button spacing */
+}
+button[default="true"] {
+
+	-moz-appearance: none !important;
+	color: var(--base_fg_selected) !important;
+	background-color: var(--button_bg) !important;
+	box-shadow: inset 0px 0px 3px 0px rgba(255,255,255,0.5) !important;
+	border: 1px solid var(--borders) !important;
+	border-radius: 3px;
+}
+button[default="true"]:hover {
+
+	background-color: var(--button_bg_hover) !important;
+}
+button[default="true"]:active {
+
+	background-color: var(--button_bg_active) !important;
+}
+#MFFABsearchButton {
+
+	margin-left: -5px !important; /* Workaround adressbook search field - dog‘s dinner button */
+}
+
+#folderpane-mode-selector-menulist,
+toolbar[brighttext] #attachmentSaveAllSingle,
+toolbar[brighttext] #attachmentSaveAllMultiple,
+menulist  {
+
+	-moz-appearance: none !important;
+	min-height: 27px !important;
+	color: var(--base_fg) !important;
+	background: linear-gradient(to bottom, rgba(128,128,128,0.6), rgba(96,96,96,0.1)) !important;
+	border-radius: 3px !important;
+	box-shadow: none !important;
+	transition: none !important;
+}
+
+#folderpane-mode-selector-menulist:hover,
+#folderpane-mode-selector-menulist:active,
+toolbar[brighttext] #attachmentSaveAllSingle:hover,
+toolbar[brighttext] #attachmentSaveAllSingle:active,
+toolbar[brighttext] #attachmentSaveAllMultiple:hover,
+toolbar[brighttext] #attachmentSaveAllMultiple:active,
+menulist:hover,
+menulist:active {
+
+	color: var(--base_fg_selected) !important;
+	background: linear-gradient(to bottom, rgba(128,128,128,0.9), rgba(128,128,128,0.1)) !important;
+}
+
+toolbar[brighttext] #attachmentSaveAllSingle label,
+toolbar[brighttext] #attachmentSaveAllMultiple label,
+#addressCol1\#1 label {
+
+	color: var(--base_fg) !important;
+}
+menulist {
+
+	border: 1px solid var(--borders) !important;
+	padding-left: 8px !important;
+	min-height: 26px !important;
+}
+
+.spinbuttons-button {
+
+	-moz-appearance: none !important;
+	color: var(--base_fg) !important;
+	background-color: var(--button_bg) !important;
+	min-width: 20px !important;
+	min-height: 13px !important;
+	border: 1px solid var(--borders) !important;
+}
+.spinbuttons-button:hover {
+
+	color: var(--base_fg_selected) !important;
+	background-color: var(--button_bg_hover) !important;
+}
+.spinbuttons-up {
+
+	background-color: var(--button_bg) !important;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAQAAAC7znxOAAAAAmJLR0QA/B6GnQUAAABaSURBVAjXY2BgYGBgYLgien7nRXEIm4mBgYHhCsevDQwu/zae5IQKXWH8PYdB4b8lgyT74gNMDAwMDAzn285/umjAwHBB9/zHC50QoWcXPSGmnHO/cI8BGwAAr34bsQp3XUwAAAAASUVORK5CYII=)!important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	border-bottom: none !important;
+	border-radius: 3px 3px 0 0 !important;
+}
+.spinbuttons-up:hover {
+
+	background-color: var(--button_bg_hover) !important;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAQAAAC7znxOAAAAAmJLR0QA/B6GnQUAAABPSURBVAjXbcqxDUBQAADRo2IAMYVEZwSJwRTmUFrAABJrSIiaXk7xicaVLwcAmDma82Xi5OVs+kJk72bl4mAcqPW0BAsPu0C7zfPXrvx1Az9qJWRuzFa4AAAAAElFTkSuQmCC)!important;
+}
+.spinbuttons-up[disabled="true"] {
+	background-color: var(--button_bg_disabled) !important;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAQAAAC7znxOAAAAAmJLR0QA/B6GnQUAAABXSURBVAjXY2BgYGBgYOgR7d7ZJw5hMzEwMDB0czBsYHT5t7GZEyrkysgwh0GBwYpBkmPxIiYGBiYGBvdWRr//3iUn//swur7sgJjzvNsLaqJ7zxMGbAAAsmMUJyX+0qYAAAAASUVORK5CYII=)!important;
+}
+.spinbuttons-down {
+
+	background-color: var(--button_bg) !important;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAQAAAC7znxOAAAAAmJLR0QA/B6GnQUAAABbSURBVAjXY2DABs4/u+gJZbmfv8/AwMTAwLDg38qLBgwMF3QZVjGuYmBgZGB4xvhyMYMjQyDDasbTH8Ps/zEyMDAwXOH4vZfBguH0L0fz73DzLoue33lRHMIGAF3iG4o6lT/+AAAAAElFTkSuQmCC)!important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	border-radius: 0 0 3px 3px !important;
+}
+.spinbuttons-down:hover {
+
+	background-color: var(--button_bg_hover) !important;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAQAAAC7znxOAAAAAmJLR0QA/B6GnQUAAABKSURBVAjXY2DABv4//e8FZbn/fwZhtP3/9N+AgeG/3v+P/zsgQoz/l/x/+t/8/8P/a/4zwbRy/D/6/+//4/85kc0T+b/jvxiEDQB0LiVf4hgX/AAAAABJRU5ErkJggg==)!important;
+}
+.spinbuttons-down[disabled="true"],
+.spinbuttons-down[disabled="true"]:hover {
+
+	background-color: var(--button_bg_disabled) !important;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAQAAAC7znxOAAAAAmJLR0QA/B6GnQUAAABZSURBVAjXY2DABrqfdntBWe7dzxgYmBgYGBYyrOg2YGDo1GNYxbiIgYGRgcGF0X0xgyNDEMMqhtPiYXH/mBgY9vxnSGF4wHCM4dmP2Lh/cPP6Rbp3dIhB2ABW9Bd2/c+24AAAAABJRU5ErkJggg==)!important;
+}
+toolbar > toolbarbutton {
+
+	margin-right: 3px !important;
+	margin-left: 3px !important;
+}
+#attachmentToggle {
+
+	-moz-appearance: treetwisty !important;
+	-moz-user-focus: normal !important;
+}
+#attachmentToggle[checked="true"] {
+
+	-moz-appearance: treetwistyopen !important;
+}
+#enigmailStatusHdrDetails {
+	-moz-appearance: none !important;
+	background-color: var(--button_bg) !important;
+	box-shadow: none !important;
+	border-radius: 3px !important;
+	border: 1px solid var(--borders) !important;
+}
+#enigmailStatusHdrDetails:hover {
+
+	background-color: var(--button_bg_hover) !important;
+}
+
+/* Workaround Thunderbird 52 */
+/* Bugs in multimessageview.css and other files */
+
+.toolbarbutton-1.msgHeaderView-button {
+
+	background: #727272 !important;
+	border-radius: 3px !important;
+	transition: none !important;
+}
+.toolbarbutton-1.msgHeaderView-button label {
+
+	color: var(--base_fg) !important;
+	background-color: transparent !important;
+}
+.toolbarbutton-1.msgHeaderView-button:hover label {
+
+	color: var(--base_fg_selected) !important;
+}
+.toolbarbutton-1.msgHeaderView-button:hover {
+
+	background: #898989 !important;
+}
+
+/******************************************/
+/************** Scrollbars ****************/
+/******************************************/
+
+scrollbar {
+
+	-moz-appearance: none !important;
+	width: 11px !important;
+	padding: 2px !important;
+	background-color: #434343 !important;
+	border-left: 1px solid var(--borders) !important;
+	background-image: none !important;
+}
+srollbarbutton {
+
+	-moz-appearance: none !important;
+	width: 9px !important;
+	max-width: 10px !important;
+	border: none !important;
+}
+slider thumb {
+
+	-moz-appearance: none !important;
+	max-width: 9px !important;
+	background-color: #898989 !important;
+	border-radius: 3px !important;
+
+}
+slider thumb:hover {
+
+	-moz-appearance: none !important;
+	background-color: #999999 !important;
+
+}
+slider thumb:active {
+
+	-moz-appearance: none !important;
+	background-color: #b3b3b3 !important;
+
+}
+thumb {
+
+	-moz-appearance: none !important;
+	width: 11px !important;
+	max-width: 11px !important;
+	min-height: 100px !important;
+	border: none !important;
+}
+
+/******************************************/
+/************** Mail header ***************/
+/******************************************/
+
+#expandedsubjectBox > .headerValue {
+
+	font-size: 120% !important;
+}
+
+/******************************************/
+/*************** Tree view ****************/
+/******************************************/
+
+treechildren::-moz-tree-row(selected) {
+
+	background-color: var(--base_bg_selected) !important;
+}
+
+treechildren::-moz-tree-cell-text(selected) {
+
+	color: var(--tree-row-highlight-text-color) !important;
+}
+
+/*********** Tree view columns ************/
+
+#folderTree treecol,
+#folderTree treecolpicker,
+#threadCols treecol,
+#threadCols treecolpicker {
+
+	-moz-appearance: none !important;
+	min-height: 22px !important;
+	min-width: 24px !important;
+	background-color: var(--treeview_header_bg) !important;
+	border: none !important;
+	border-bottom: 1px solid var(--borders) !important;
+	border-left: 1px solid var(--borders_separator) !important;
+}
+#folderTree treecol label,
+#threadCols treecol label {
+
+	padding-bottom: 2px !important;
+	color: var(--treeview_header_fg);
+	font-weight: bold !important;
+	vertical-align: baseline !important;
+}
+#folderTree treecol:hover label,
+#folderTree treecol:hover,
+#folderTree treecolpicker:hover,
+#threadCols treecol:hover label,
+#threadCols treecol:hover,
+#threadCols treecolpicker:hover {
+
+	-moz-appearance: none !important;
+	color: var(--treeview_header_fg_hover);
+	background-color: var(--treeview_header_bg_hover) !important;
+}
+
+/******************************************/
+/************** Folder tree ***************/
+/******************************************/
+
+treechildren:-moz-tree-twisty {
+
+	width: 12px !important;
+	-moz-image-region: rect(0px 12px 12px 0px) !important;
+	-moz-appearance: none !important;
+	list-style-type: image !important;
+}
+#folderTree {
+
+	-moz-appearance: none !important;
+	color: var(--folder-tree-text-color) !important;
+	background-color: var(--sidebar_bg) !important;
+}
+#folderPaneCols > hbox,
+#folderTree > treechildren::-moz-tree-row,
+.tree-scrollable-columns {
+
+	-moz-appearance: none !important;
+	color: inherit !important;
+	background-color: var(--sidebar_bg) !important;
+}
+#folderTree > hbox {
+
+	margin-top: 30px !important;
+}
+#folderTree > treechildren::-moz-tree-row {
+
+	margin-top: 5px !important;
+	height: 20px !important;
+}
+#folderTree > treechildren::-moz-tree-row(hover) {
+
+	border: none !important;
+	background-color: var(--sidebar_bg_hover) !important;
+}
+
+#folderTree > treechildren::-moz-tree-row(selected) {
+
+	border: none !important;
+	background-color: var(--base_bg_selected) !important;
+}
+#folderTree > treechildren::-moz-tree-cell-text(selected) {
+
+	color: var(--base_fg_selected) !important;
+}
+
+#folderTree > treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true),
+#folderTree > treechildren::-moz-tree-cell-text(folderNameCol, closed, subfoldersHaveUnreadMessages-true) {
+
+	color: inherit !important;
+	font-style: italic !important;
+}
+treechildren::-moz-tree-cell-text(folderNameCol, isServer-true, biffState-NewMail),
+treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true),
+treechildren::-moz-tree-cell-text(folderNameCol, specialFolder-Inbox, newMessages-true) {
+
+	color: var(--tree-link-color) !important;
+}
+
+/******************************************/
+/************** Thread tree ***************/
+/******************************************/
+
+#threadTree {
+
+background-color: var(--base_color) !important;
+}
+#threadTree > treechildren::-moz-tree-row {
+
+	height: 26px !important;
+	background-color: var(--treeview_row_bg) !important;
+	border: none !important;
+	border-bottom: 1px solid transparent !important;
+}
+#threadTree > treechildren:-moz-tree-row(even) {
+
+	background-color: var(--treeview_row_bg_even) !important;
+}
+#threadTree > treechildren:-moz-tree-row(hover) {
+
+	border-bottom: 1px dotted var(--treeview_row_hover_line) !important;
+}
+#threadTree > treechildren::-moz-tree-cell-text {
+
+	color: var(--message-list-text-color) !important;
+}
+#threadTree > treechildren::-moz-tree-row(selected) {
+
+	border: none !important;
+	background-color: var(--base_bg_selected) !important;
+}
+#threadTree > treechildren::-moz-tree-cell-text(selected) {
+
+	color: var(--message-list-highlight-text-color);
+}
+#threadCols treecol[sortDirection="ascending"] .treecol-sortdirection {
+
+	-moz-appearance: button-arrow-up !important;
+}
+#threadCols treecol[sortDirection="descending"] .treecol-sortdirection {
+
+	-moz-appearance: button-arrow-down !important;
+}
+
+/******************************************/
+/*************** Adressbook ***************/
+/******************************************/
+
+#CardViewBox,
+#CardViewInnerBox,
+#CardViewOuterBox {
+
+	background-color: var(--base_bg) !important;
+}
+#dirTree {
+
+	color: var(--base_fg_selected) !important;
+	background-color: var(--sidebar_bg) !important;
+}
+#localResultsOnlyMessage {
+
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	background-color: var(--infobar_bg) !important;
+}
+#CardTitle {
+
+	font-size: 120% !important;
+	font-weight: bold;
+	border-bottom: 2px solid var(--infobar_bg) !important;
+	min-width: 120px;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+}
+.CardViewHeading {
+
+	padding: 1px;
+	padding-inline-start: 5px;
+	padding-bottom: 6px !important;
+	background-color: transparent !important;
+	border-bottom: 2px solid var(--infobar_bg) !important;
+	color: var(--base_fg) !important;
+}
+
+/******************************************/
+/**************** Calendar ****************/
+/******************************************/
+
+#calendar-task-details-description {
+
+	font-family: sans !important;
+	font-size: inherit !important;
+	padding-top: 10px !important;
+}
+
+#calendar-month-view-button,
+#calendar-multiweek-view-button,
+#calendar-week-view-button,
+#calendar-day-view-button,
+#intervalDescription,
+#today-view-button,
+#calendarWeek {
+
+font-size: 1em !important;
+}
+.agenda-container-box,
+.agenda-allday-container-box,
+.agenda-checkbox,
+.agenda-container-box,
+.agenda-allday-container-box,
+.agenda-checkbox {
+    background-color: transparent !important;
+}
+.agenda-container-box[selected="true"],
+.agenda-allday-container-box[selected="true"],
+.agenda-checkbox[selected="true"], .agenda-container-box[selected="true"][current="true"],
+.agenda-allday-container-box[selected="true"][current="true"],
+.agenda-checkbox[selected="true"][current="true"] {
+
+	background-color: var(--base_bg_selected) !important;
+	color: var(--base_fg_selected) !important;
+}
+
+calendar-month-day-box-item[selected="true"] .calendar-color-box,
+calendar-event-box[selected="true"] .calendar-color-box,
+calendar-editable-item[selected="true"] .calendar-color-box {
+
+	color: var(--viewColor) !important;
+	background-color: transparent !important;
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4) !important;
+}
+.calendar-task-tree > treechildren::-moz-tree-cell-text(inprogress) {
+
+	color: HighlightText !important;
+	background-color: transparent !important;
+	border-left: 5px solid #33CC00 !important;
+}
+.calendar-task-tree > treechildren::-moz-tree-cell-text(overdue) {
+
+	color: HighlightText !important;
+	background-color: transparent !important;
+	border-left: 5px solid #DD0000 !important;
+}
+.calendar-task-tree > treechildren::-moz-tree-row(inprogress, selected, focus),
+.calendar-task-tree > treechildren::-moz-tree-row(overdue, selected, focus) {
+
+	background-color: var(--base_bg_selected) !important;
+}
+
+/*****************************************/
+/*** More legible colors on dark theme ***/
+/*****************************************/
+
+.ac-url-text {
+
+	color: var(--base_fg) !important;
+	margin-bottom: 0.8em !important;
+}
+.acctCentralLinkText:hover,
+.acctCentralLinkText:focus,
+.acctCentralLinkText:active,
+.text-link,
+.link,
+.inline-link,
+.link:visited {
+
+	color: var(--tree-link-color) !important;
+}
+.folderSummaryMessage:hover > .folderSummary-message-row,
+.folderSummaryMessage:hover:active > .folderSummary-message-row {
+
+	color: var(--tree-link-color) !important;
+}
+#quick-filter-bar[filterActive="nomatches"] #qfb-results-label {
+
+	color: var(--theme-highlight-orange) !important;
+}
+#threadTree[filterActive="nomatches"] {
+
+	outline: 1px solid var(--theme-highlight-orange) !important;
+}
+-moz-native-anonymous .highlighter-container {
+
+	--highlighter-guide-color: var(--tree-link-color) !important;
+}
+.CodeMirror-Tern-completion-object:before {
+
+	background-color: var(--tree-link-color) !important;
+}
+.CodeMirror-Tern-completion-string:before,
+.CodeMirror-Tern-completion-fn:before,
+.CodeMirror-Tern-completion-bool:before {
+
+	background-color: var(--theme-highlight-orange) !important;
+}
+.cm-s-mozilla .cm-unused-line {
+
+	text-decoration: line-through !important;
+	text-decoration-color: var(--tree-link-color) !important;
+}
+.cm-s-mozilla .cm-executed-line {
+
+	background-color: var(--darkgreen) !important;
+}
+.moreIndicator:hover {
+
+	color: var(--theme-highlight-lightorange) !important;
+}
+::-moz-progress-bar {
+
+	background-color: var(--theme-highlight-blue) !important;
+}
+.toolbarbutton-badge {
+
+	background-color: var(--theme-highlight-orange) !important;
+}
+:-moz-handler-vulnerable-updatable .action-link,
+:-moz-handler-vulnerable-updatable .action-link:active {
+
+	background-color: var(--theme-highlight-red) !important;
+}
+#detail-contrib-btn {
+
+	border: 1px solid #32aae3 !important;
+	background-color: #32aae3 !important;
+}
+#detail-contrib-btn:not(:active):hover {
+
+	border-color: #4C97BA !important;
+	background-color: #4C97BA !important;
+}
+#detail-contrib-btn:active:hover {
+
+	background-color: #3288b0 !important;
+	border-color: #3288b0 !important;
+}
+.accuracyWarning,
+.badInputWarning {
+
+	color: var(--theme-highlight-red) !important;
+}
+#countBox[filterActive="matches"] {
+
+	color: var(--theme-highlight-green) !important;
+}
+#countBox[filterActive="nomatches"] {
+
+	color: var(--theme-highlight-orange) !important;
+}
+.outgoing > .pseudo {
+
+	color: #8484d8 !important;
+}
+.incoming > .pseudo {
+
+	color: var(--theme-highlight-orange) !important;
+}
+:root.blacklist {
+
+	background-color: var(--theme-highlight-red:) !important;
+}
+.CardViewLink {
+
+	color: var(--base_fg) !important;
+}
+.CardViewLink:hover {
+
+	color: var(--theme-highlight-blue) !important;
+}
+
+/******************************************/
+/*************** Color tags ***************/
+/******************************************/
+
+/*************** Column 1 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-FFFFFF, subjectCol) {
+
+	border-left: 3px solid #FFFFFF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-CCCCCC, subjectCol) {
+
+	border-left: 3px solid #CCCCCC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-C0C0C0, subjectCol) {
+
+	border-left: 3px solid #C0C0C0 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-999999, subjectCol) {
+
+	border-left: 3px solid #999999 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-666666, subjectCol) {
+
+	border-left: 3px solid #666666 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-333333, subjectCol) {
+
+	border-left: 3px solid #333333 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-000000, subjectCol) {
+
+	border-left: 3px solid #000000 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 2 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-FFCCCC, subjectCol) {
+
+	border-left: 3px solid #FFCCCC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FF6666, subjectCol) {
+
+	border-left: 3px solid #FF6666 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FF0000, subjectCol) {
+
+	border-left: 3px solid #FF0000 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-CC0000, subjectCol) {
+
+	border-left: 3px solid #CC0000 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-990000, subjectCol) {
+
+	border-left: 3px solid #990000 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-660000, subjectCol) {
+
+	border-left: 3px solid #660000 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-330000, subjectCol) {
+
+	border-left: 3px solid #330000 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 3 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-FFCC99, subjectCol) {
+
+	border-left: 3px solid #FFCC99 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FF9966, subjectCol) {
+
+	border-left: 3px solid #FF9966 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FF9900, subjectCol) {
+
+	border-left: 3px solid #FF9900 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FF6600, subjectCol) {
+
+	border-left: 3px solid #FF6600 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-CC6600, subjectCol) {
+
+	border-left: 3px solid #CC6600 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-993300, subjectCol) {
+
+	border-left: 3px solid #993300 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-663300, subjectCol) {
+
+	border-left: 3px solid #663300 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 4 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-FFFF99, subjectCol) {
+
+	border-left: 3px solid #FFFF99 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FFFF66, subjectCol) {
+
+	border-left: 3px solid #FFFF66 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FFCC66, subjectCol) {
+
+	border-left: 3px solid #FFCC66 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FFCC33, subjectCol) {
+
+	border-left: 3px solid #FFCC33 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-CC9933, subjectCol) {
+
+	border-left: 3px solid #CC9933 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-996633, subjectCol) {
+
+	border-left: 3px solid #996633 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-663333, subjectCol) {
+
+	border-left: 3px solid #663333 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 5 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-FFFFCC, subjectCol) {
+
+	border-left: 3px solid #FFFFCC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FFFF33, subjectCol) {
+
+	border-left: 3px solid #FFFF33 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FFFF00, subjectCol) {
+
+	border-left: 3px solid #FFFF00 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FFCC00, subjectCol) {
+
+	border-left: 3px solid #FFCC00 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-999900, subjectCol) {
+
+	border-left: 3px solid #999900 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-666600, subjectCol) {
+
+	border-left: 3px solid #666600 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-333300, subjectCol) {
+
+	border-left: 3px solid #333300 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 6 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-99FF99, subjectCol) {
+
+	border-left: 3px solid #99FF99 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-66FF99, subjectCol) {
+
+	border-left: 3px solid #66FF99 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-33FF33, subjectCol) {
+
+	border-left: 3px solid #33FF33 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-33CC00, subjectCol) {
+
+	border-left: 3px solid #33CC00 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-009900, subjectCol) {
+
+	border-left: 3px solid #009900 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-006600, subjectCol) {
+
+	border-left: 3px solid #006600 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-003300, subjectCol) {
+
+	border-left: 3px solid #003300 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 7 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-99FFFF, subjectCol) {
+
+	border-left: 3px solid #99FFFF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-33FFFF, subjectCol) {
+
+	border-left: 3px solid #33FFFF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-66CCCC, subjectCol) {
+
+	border-left: 3px solid #66CCCC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-00CCCC, subjectCol) {
+
+	border-left: 3px solid #00CCCC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-339999, subjectCol) {
+
+	border-left: 3px solid #339999 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-336666, subjectCol) {
+
+	border-left: 3px solid #336666 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-003333, subjectCol) {
+
+	border-left: 3px solid #003333 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 8 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-CCFFFF, subjectCol) {
+
+	border-left: 3px solid #CCFFFF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-66FFFF, subjectCol) {
+
+	border-left: 3px solid #66FFFF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-33CCFF, subjectCol) {
+
+	border-left: 3px solid #33CCFF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-3366FF, subjectCol) {
+
+	border-left: 3px solid #3366FF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-3333FF, subjectCol) {
+
+	border-left: 3px solid #3333FF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-000099, subjectCol) {
+
+	border-left: 3px solid #000099 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-000066, subjectCol) {
+
+	border-left: 3px solid #000066 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 9 *****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-CCCCFF, subjectCol) {
+
+	border-left: 3px solid #CCCCFF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-9999FF, subjectCol) {
+
+	border-left: 3px solid #9999FF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-6666CC, subjectCol) {
+
+	border-left: 3px solid #6666CC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-6633FF, subjectCol) {
+
+	border-left: 3px solid #6633FF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-6600CC, subjectCol) {
+
+	border-left: 3px solid #6600CC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-333399, subjectCol) {
+
+	border-left: 3px solid #333399 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-330099, subjectCol) {
+
+	border-left: 3px solid #330099 !important;
+	padding-left: 0px !important;
+}
+
+/*************** Column 10 ****************/
+
+#threadTree > treechildren::-moz-tree-cell(lc-FFCCFF, subjectCol) {
+
+	border-left: 3px solid #FFCCFF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-FF99FF, subjectCol) {
+
+	border-left: 3px solid #FF99FF !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-CC66CC, subjectCol) {
+
+	border-left: 3px solid #CC66CC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-CC33CC, subjectCol) {
+
+	border-left: 3px solid #CC33CC !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-993399, subjectCol) {
+
+	border-left: 3px solid #993399 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-663366, subjectCol) {
+
+	border-left: 3px solid #663399 !important;
+	padding-left: 0px !important;
+}
+#threadTree > treechildren::-moz-tree-cell(lc-330033, subjectCol) {
+
+	border-left: 3px solid #330033 !important;
+	padding-left: 0px !important;
+}

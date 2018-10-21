@@ -1,0 +1,237 @@
+/************************************************
+   Name: Shades of gray Firefox userContent.css
+   Author: WernerFP
+   License: GPL-3.0+
+************************************************/
+
+
+/******************************************/
+/************* Firefox forms **************/
+/******************************************/
+
+@-moz-document url-prefix("http"), url-prefix("moz-extension") {
+
+	input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset]),textarea,select {
+
+		-moz-appearance: none;
+		color: black;
+		background-color: white;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+	}
+	select {
+
+		-moz-appearance: none;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAMklEQVQI13XMwQkAIBADweGw/zbs7xrQlyKnBvYTNoHEKGSgu7O7c5UQ1Xg95LKh/cwJnLQO8gRyckIAAAAASUVORK5CYII=);
+		background-position: right 5px center;
+		background-repeat: no-repeat;
+		padding-right: 1.1em !important;
+		color: black;
+		background-color: #dfdfdf;
+		display: inline-block;
+		cursor: pointer;
+		box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+		box-shadow: inset 0px 3px 0px 0px #ebebeb;
+		border-radius: 3px;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+	}
+	input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset]):hover,textarea:hover,select:hover {
+
+		border: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset]):focus,textarea:focus,select:focus {
+
+		border: 1px solid rgba(0, 0, 0, 1);
+	}
+	select:hover,
+	select:active {
+
+		background-color: #e7e7e7;
+	}
+	button,
+	input[type="reset"],
+	input[type="button"],
+	input[type="submit"] {
+
+		-moz-appearance: none;
+		padding: 0 2.7em;
+		color: black;
+		background-color: #dfdfdf;
+		display: inline-block;
+		cursor: pointer;
+		box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+		border-radius: 3px;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+	}
+	button:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover,
+	input[type="submit"]:hover {
+
+		background-color: #ebebeb;
+		border: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	button:active,
+	input[type="reset"]:active,
+	input[type="button"]:active,
+	input[type="submit"]:active {
+
+		background-color: #f0f0f0;
+		border: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	input[type="radio"],
+	input[type="checkbox"] {
+
+		filter: brightness(1.45);
+	}
+}
+
+/******************************************/
+/******** about:newtab about:home *********/
+/******************************************/
+
+@-moz-document url(about:newtab), url(about:home) {
+
+	body {
+
+		--newtab-contextmenu-background-color: #404040 !important;
+		--newtab-element-hover-color: #787878 !important;
+		--newtab-border-secondary-color: #292929 !important;
+		--newtab-search-dropdown-color: #575757 !important;
+		--newtab-search-dropdown-header-color: #313131 !important;
+		background-color: #323232 !important;
+		overflow: auto !important;
+		color: #d1d1d1 !important;
+
+	}
+	.collapsible-section.active {
+
+		background: rgba( 190, 190, 190, 0.1 ) !important;
+	}
+	#newtab-customize-overlay {
+
+		background: #2e2e2e !important;
+	}
+	.card,
+	.prefs-pane .sidebar {
+
+		background: #2e2e2e !important;
+		color: #f5f5f5 !important;
+	}
+	.context-menu, .section-top-bar .info-option {
+
+		background: #444444 !important;
+		color: #ededed !important;
+		font-size: 13px !important;
+	}
+	#snippets-container,
+	#onboarding-notification-bar.onboarding-opened {
+
+		display: none !important;
+	}
+	.section-title span {
+
+		color: #d1d1d1 !important;
+		fill: #737373 !important;
+		vertical-align: middle !important;
+	}
+	.icon,
+	.icon.icon-topsites,
+	.icon.icon-pocket,
+	.info-option-icon,
+	.icon.icon-highlights {
+
+		fill: #d1d1d1 !important;
+	}
+	.card {
+
+		background: #515151 !important;
+	}
+	.topic,
+	.card-host-name,
+	.card-context,
+	.data-reactid,
+	.empty-state-message,
+	.card-outer,
+	.card-text,
+	.card-title {
+
+		color: #d1d1d1 !important;
+	}
+	.card-outer .card-text:not(.no-description) .card-title {
+
+	color: inherit !important;
+	}
+	.modal {
+
+		background: #535353 !important;
+	}
+	.tile {
+
+		background: rgba(255, 255, 255, 0.3) !important;
+	}
+	.actions button:not(.done) {
+
+		background: #777777 !important;
+		border: 1px solid #B1B1B3;
+		border-radius: 4px;
+		color: #d1d1d1 !important;
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.section-top-bar .info-option-manage button,
+	.section-top-bar .info-option-manage button::after,
+	.edit-topsites-wrapper .edit-topsites-button button,
+	.topic .topic-read-more,
+	.topic .topic-read-more::after,
+	.data-reactid,
+	.info-option-link,
+	.topic-link {
+
+		color: #4AA6D7 !important;
+		fill: #4AA6D7 !important;
+		background: transparent !important;
+	}
+	.search-wrapper input {
+
+		border: 1px solid #111111 !important;
+		background: #575757 !important;
+	}
+	.search-wrapper:active input,
+	.search-wrapper input:focus {
+
+		color: #ffffff !important;
+		background-color: #3a3a3a !important;
+		box-shadow: inset 1px 0 #787878,
+			inset -1px 0 #787878,
+			inset 0 1px #787878,
+			inset 0 -1px #787878 !important;
+		outline: none;
+	}
+	.search-wrapper .search-label,
+	.search-wrapper .search-button {
+
+		fill: #919191 !important;
+	}
+	.button.dismiss,
+	.actions button.dismiss {
+
+		background-color: transparent !important;
+	}
+	.contentSearchSuggestionsContainer {
+
+		background-color: #474747 !important;
+	}
+	.contentSearchSettingsButton {
+
+		background-color: #575757 !important;
+	}
+	.contentSearchSettingsButton.selected {
+
+		background-color: #696969 !important;
+	}
+	.contentSearchSettingsButton:active {
+
+		background-color: #757575 !important;
+	}
+}

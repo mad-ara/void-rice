@@ -1,0 +1,51 @@
+/*******************************************
+   Name: Shades of gray GTK3 Theme
+   Author: WernerFP
+   License: GPL-3.0+
+*******************************************/
+
+/*
+You can overwrite values defined in gtk.css with new values in this file.
+Changes can also be made in ~/.config/gtk-3.0.
+Some default values are listed below.
+*/
+
+
+/****** Window and menu shadow in Gnome applications ******/
+
+decoration,
+.ssd decoration,
+.csd.popup decoration,
+tooltip.csd decoration {
+
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.55);
+}
+popover.background {
+
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.55);
+}
+
+
+/*********** Line spacing in sidebar treeviews ************/
+
+placessidebar row,
+.thunar treeview {
+
+	min-height: 25px;
+	padding: 0px;
+}
+.nemo-window .sidebar treeview,
+.caja-side-pane treeview {
+
+	padding-top: 0.15em;
+	padding-bottom: 0.15em;
+}
+
+
+/****************** Mate panel separator ******************/
+
+PanelSeparator,
+MatePanelAppletFrameDBus {
+
+	opacity: 0.3;
+}

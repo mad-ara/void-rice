@@ -1,0 +1,27 @@
+******************
+* userChrome.css *
+******************
+
+The file "userChrome.css" contains the Firefox theme for Shades-of-gray.
+You can copy the file or its content to this location:
+
+~/.mozilla/firefox//<name-of-your-profile>/chrome/userChrome.css
+
+The customizations are based on the dark theme of Firefox, which should be enabled in customize settings
+
+If you change a Shades-of-gray theme color, it is not necessary to copy the file again. You can simply comment out the current theme color and comment in the new theme color value.
+
+
+*******************
+* userContent.css *
+*******************
+
+Firefox uses the widgets of the current GTK3 theme in websites that have not designed their own widgets for forms.
+With dark themes this is ugly and input fields, checkboxes etc. are difficult to use (e.g. black font in dark input fields).
+To fix this behavior the file "userContent.css" contains color-neutral form widgets.
+The file also contains theme customizations for the New Tab page.
+
+Copy the file or its content to this location for enabling:
+
+~/.mozilla/firefox//<name-of-your-profile>/chrome/userContent.css
+

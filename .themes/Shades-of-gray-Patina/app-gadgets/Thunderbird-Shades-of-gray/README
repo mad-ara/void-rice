@@ -1,0 +1,12 @@
+******************
+* userChrome.css *
+******************
+
+The file "userChrome.css" contains a Thunderbird theme adapted to Shades of gray.
+Copy the file or its content to this location:
+
+~/.thunderbird/<name-of-your-profile>/chrome/userChrome.css
+
+If you change a Shades of gray theme color, it is not necessary to copy the file again. You can simply comment out the current theme color and comment in the new theme color value.
+
+Lightning is using its own colors in default setting. The option for using the theme colors is hidden as "Accessibility". Open the Thunderbird settings and activate the checkbox "Optimize colors for accesibility" in calendar area.

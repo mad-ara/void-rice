@@ -1,0 +1,31 @@
+# Name: Shades of gray GTK2 Theme
+# Author: WernerFP
+# License: GPL-3.0+
+
+
+# Thunar (old version)
+
+style "thunar-handle" { GtkPaned::handle-size = 2 }
+
+style "dark-sidebar" {
+	GtkTreeView::odd_row_color = @dark_sidebar_bg
+	GtkTreeView::even_row_color = @dark_sidebar_bg
+
+
+	base[NORMAL] = @dark_sidebar_bg
+	base[INSENSITIVE] = @dark_sidebar_bg
+
+	text[NORMAL] = "#f5f5f5"
+	text[ACTIVE] = @selected_fg_color
+	text[SELECTED] = @selected_fg_color
+}
+
+style "thunar-frame" {
+	xthickness = 0
+	ythickness = 0
+}
+
+widget_class "*ThunarWindow*.<GtkScrolledWindow>"       style "thunar-frame"
+widget_class "*ThunarShortcutsView*"                    style "dark-sidebar"
+widget_class "*ThunarTreeView*"                         style "dark-sidebar"
+widget_class "*ThunarWindow*.<GtkHPaned>"               style "thunar-handle"

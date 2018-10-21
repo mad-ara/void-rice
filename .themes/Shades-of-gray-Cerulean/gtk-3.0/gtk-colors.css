@@ -1,0 +1,250 @@
+/*******************************************
+Name: Shades of gray GTK3 Theme
+Author: WernerFP
+License: GPL-3.0+
+*******************************************/
+
+
+/******************************************/
+/***** Shades of gray color selection *****/
+/******************************************/
+
+/* Shades of gray */
+/*@define-color theme_selected_bg_color #787878;*/
+
+/* Orient blue */
+/*@define-color theme_selected_bg_color #1B779E;*/
+
+/* Arch blue */
+/*@define-color theme_selected_bg_color #1F77B7;*/
+
+/* Cerulean blue */
+@define-color theme_selected_bg_color #6484a4;
+
+/* Patina green */
+/*@define-color theme_selected_bg_color #3c7460;*/
+
+/* Firebrick */
+/*@define-color theme_selected_bg_color #c14e4e;*/
+
+/* Harvest */
+/*@define-color theme_selected_bg_color #AD8641;*/
+
+
+/******************************************/
+/*********** Window Manager ***************/
+/******************************************/
+
+/* These colors are exported for the window manager
+and shouldn't be used in applications,read if you
+used those and something break with a version upgrade
+you're on your own... */
+@define-color wm_title                          #ababab;
+@define-color wm_unfocused_title                #6d6d6d;
+@define-color wm_bg                             #373737;
+@define-color wm_bg_unfocused                   #373737;
+@define-color wm_highlight                      #404040;
+@define-color wm_button_close_bg                #ababab;
+@define-color wm_button_close_hover_bg          #dcdcdc;
+@define-color wm_button_close_active_bg         #ffffff;
+@define-color wm_icon_close_bg                  #373737;
+@define-color wm_button_hover_bg                #dcdcdc;
+@define-color wm_button_active_bg               #ffffff;
+@define-color wm_button_hover_border            #2b2b2b;
+@define-color wm_icon_bg                        #ababab;
+@define-color wm_icon_unfocused_bg              #6d6d6d;
+@define-color wm_icon_hover_bg                  #dcdcdc;
+@define-color wm_icon_active_bg                 #ffffff;
+
+/*******************************************/
+/*** GTK NAMED COLORS - use responsibly! ***/
+/*******************************************/
+
+@define-color theme_base_color                  #515151;
+@define-color theme_fg_color                    #f5f5f5;
+@define-color theme_bg_color                    #404040;
+@define-color theme_text_color                  #f5f5f5;
+@define-color theme_selected_fg_color           #ffffff;
+@define-color theme_unfocused_base_color        #4a4a4a;
+@define-color theme_unfocused_fg_color          #a3a3a3;
+@define-color theme_unfocused_bg_color          #373737;
+@define-color theme_unfocused_text_color        #a3a3a3;
+@define-color theme_unfocused_selected_fg_color #f5f5f5;
+@define-color theme_unfocused_selected_bg_color #808080;
+@define-color placeholder_text_color            rgba(170, 170, 170, 0.15);
+@define-color borders                           #181818;
+@define-color unfocused_borders                 #262626;
+@define-color insensitive_bg_color              #484848;
+@define-color insensitive_fg_color              #a3a3a3;
+@define-color insensitive_base_color            #484848;
+@define-color unfocused_insensitive_color       #484848;
+@define-color warning_color                     #d41835;
+@define-color error_color                       #eb6300;
+@define-color success_color                     #5aa411;
+
+/******************************************/
+/************ COLOR VARIABLES *************/
+/******************************************/
+
+/* Base */
+@define-color base_color                  @theme_base_color;           /* #515151*/
+@define-color base_dark_color             #373737;
+@define-color base_fg                     @theme_fg_color;             /* #f5f5f5 */
+@define-color base_bg                     @theme_bg_color;             /* #404040 */
+@define-color base_fg_insens              @insensitive_fg_color;       /* #a3a3a3 */
+@define-color base_fg_insens_hover        #cccccc;
+@define-color base_fg_selected            @theme_selected_fg_color;    /* #ffffff */
+@define-color base_fg_insens_selected     #cccccc;
+@define-color base_bg_selected            @theme_selected_bg_color;    /* Theme color */
+@define-color base_bg_unfocused           @theme_unfocused_bg_color;
+
+/* Menu */
+@define-color menu_bg                     @theme_bg_color;             /* #404040 */
+@define-color menu_bg_hover               @theme_selected_bg_color;    /* Theme color */
+@define-color menu_arrow                  #595959;
+@define-color menu_borders                #313131;                     /* #292929 */
+
+/* Border */
+@define-color borders                     #232323;
+@define-color borders_insens              @unfocused_borders;          /* #262626 */
+@define-color borders_active              #787878;
+
+/* Sidebar */
+@define-color sidebar_fg                  rgba(255, 255, 255, 0.75);
+@define-color sidebar_bg                  #3a3a3a;
+@define-color sidebar_bg_hover            rgba(128, 128, 128, 0.32);
+@define-color sidebar_placeholder         #F08532;
+
+/* Button and Entry */
+@define-color button_bg                    #575757;      /* = entry */
+@define-color button_bg_hover              #696969;
+@define-color button_bg_active             #757575;
+@define-color button_bg_disabled           #464646;      /* = entry disabled */
+@define-color button_bg_active_disabled    #616161;
+
+/* Button */
+@define-color button_bg_suggest            #747474;
+@define-color button_bg_suggest_hover      #868686;
+@define-color button_bg_suggest_selected   #999999;
+@define-color stackswitcher_bg             rgba(255, 255, 255, 0.15);
+@define-color stackswitcher_bg_hover       rgba(255, 255, 255, 0.25);
+@define-color stackswitcher_bg_active      rgba(255, 255, 255, 0.32);
+@define-color stackswitcher_bg_disabled    @button_bg_disabled;
+
+/* Notebook Button and Entry */
+@define-color note_button_bg               #626262;     /* = notebook: entry */
+@define-color note_button_bg_hover         #727272;
+@define-color note_button_bg_active        #828282;
+@define-color note_button_bg_disabled      #535353;     /* = notebook: entry disabled */
+
+/* Entry */
+@define-color entry_bg                     #575757;
+@define-color entry_bg_focus               #3a3a3a;
+
+/* Headerbar */
+@define-color headerbar_fg                 rgba(255, 255, 255, 0.85);
+@define-color headerbar_fg_insens          rgba(245, 255, 255, 0.5);
+
+/* Progressbar */
+@define-color progressbar_bg               #282828;
+@define-color progressbar_bg_highlight     #898989;
+
+/* Scale */
+@define-color scale_bg                      #282828;
+@define-color scale_bg_highlight            #898989;
+@define-color scale_bg_insens               #323232;
+
+/* Slider */
+@define-color slider                        #828282;
+@define-color slider_hover                  #999999;
+@define-color slider_active                 #a2a2a2;
+@define-color slider_insens                 #6b6b6b;
+
+/* Levelbar */
+@define-color levelbar_trough               #313131;
+@define-color levelbar_block_low            #f26d24;
+@define-color levelbar_block_high           #4caf50;
+@define-color levelbar_block_full           #b3b3b3;
+@define-color levelbar_block_empty          #656565;
+@define-color levelbar_block_not_empty      #868686;
+
+/* Infobar */
+@define-color infobar_bg                    #828282;
+@define-color infobar_button_bg             rgba(128, 128, 128, 0.5);
+@define-color infobar_button_bg_hover       rgba(255, 255, 255, 0.15);
+@define-color infobar_button_bg_active      rgba(255, 255, 255, 0.3);
+
+@define-color infobar_border                rgba(255, 255, 255, 0.75);
+@define-color infobar_border_active         rgba(255, 255, 255, 9);
+
+/* Rubberband */
+@define-color rubberband_bg                 rgba(255, 255, 255, 0.05);
+@define-color rubberband_borders            #262626;
+
+/* Scrollbar */
+@define-color scrollbar_border              @borders;                 /* #232323 */
+@define-color scrollbar_overlay             #eaeaea;
+@define-color scrollbar_slider              #898989;
+@define-color scrollbar_slider_hover        #999999;
+@define-color scrollbar_slider_active       #b1b1b1;
+@define-color scrollbar_slider_insens       transparent;
+@define-color scrollbar_trough              #434343;
+
+/* Warning and shutdown colors */
+@define-color warning                       #c23b40;
+@define-color warning_active                @warning_color;           /* #d41835 */
+@define-color warning_selected              #e4002b;
+/* Error and restart colors */
+@define-color error                         #d8712e;
+@define-color error_active                  @error_color;             /* #eb6300 */
+@define-color error_selected                #ff5600;
+
+/* Treeview */
+@define-color treeview_header_fg            rgba(255, 255, 255, 0.6);
+@define-color treeview_header_fg_hover      rgba(255, 255, 255, 0.9);
+@define-color treeview_header_bg            @base_dark_color;
+@define-color treeview_header_bg_hover      #303030;
+@define-color treeview_progress_bg          #757575;
+@define-color treeview_progress_bg_focus    #858585;
+@define-color treeview_progress_bg_trough   #424242;
+@define-color treeview_expander_fg          #a6a6a6;
+@define-color treeview_expander_fg_hover    @theme_fg_color;          /* #f5f5f5 */
+
+/* Raw */
+@define-color raw_bg_hover                  rgba(255, 255, 255, 0.12);
+
+/* Tab */
+@define-color tab_bg_activatable            rgba(128, 128, 128, 0);
+@define-color tab_bg_activatable_hover      rgba(128, 128, 128, 0.12);
+
+/* Link */
+@define-color link_fg                       #cccccc;
+@define-color link_fg_active                #e6e6e6;
+@define-color link_fg_visited               #d6d6d6;
+@define-color link_fg_selected              #f5f5f5;
+
+/* Images */
+@define-color image_fg                      #a6a6a6;
+
+/* Tooltip */
+@define-color tooltip_bg                    #474747;
+@define-color tooltip_border                #191919;
+
+/* Panel */
+@define-color panel_bg                      #000000;
+@define-color panel_button_bg               transparent;
+@define-color panel_button_bg_hover         #4b4b4b;
+@define-color panel_button_bg_selected      #4b4b4b;
+
+/* App notification */
+@define-color app_notification_bg           #404040;
+
+/* Colorswatch */
+@define-color colorswatch_bg                #474747;
+@define-color colorswatch_bg_hover          #535353;
+
+/* Separator */
+@define-color separator_fg                  rgba(0, 0, 0, 0.4);
+
+/* Drop */
+@define-color drop_color                    @theme_selected_bg_color;    /* Theme color */
