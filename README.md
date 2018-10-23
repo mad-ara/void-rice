@@ -1,6 +1,8 @@
-# suckless-void
+# void-rice
 
 My custom VoidLinux rice
+
+
 
 ## Installation
 
@@ -16,6 +18,8 @@ My custom VoidLinux rice
 ## Excluded packages you may like to install
 * Dependencies to build `software/` (TBD)
 * The `firefox` web browser
+* The `scrot` utility for screenshots
+* The `feh` image viewer
 * The `emacs` text editor
 * LXDE tools to configure the system (`lxappearance` for GTK theme, icon and font configuration, `lxtask` as a GUI task manager and `lxrandr` to configure multiple screens)
 * **GTK(2/3) Theme**: `numix-themes`

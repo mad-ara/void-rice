@@ -8,7 +8,7 @@ static const char *fonts[] = {
     "Fira Code:style=Regular:size=10",
     "Siji:style=Regular:size=12"
 };
-static const unsigned int borderpx   = 0;        /* border pixel of windows */
+static const unsigned int borderpx   = 1;        /* border pixel of windows */
 static const unsigned int snap       = 32;       /* snap pixel */
 static const int showbar             = 1;        /* 0 means no bar */
 static const int topbar              = 1;        /* 0 means bottom bar */
@@ -19,8 +19,8 @@ static const unsigned int tagspacing = 10;       /* size of icon area */
 #define NUMCOLORS 9
 static const char colors[NUMCOLORS][MAXCOLORS][9] = {
 	// border	 	foreground	  background
-	{ "#151515",	 "#ffffff", 	  "#151515" },  // 0 = normal
-	{ "#151515", 	 "#ffffff", 	  "#BD3538" },  // 1 = selected
+	{ "#444444",	 "#ffffff", 	  "#151515" },  // 0 = normal
+	{ "#BD3538", 	 "#ffffff", 	  "#BD3538" },  // 1 = selected
 	{ "#151515", 	 "#ffffff", 	  "#da846b" },  // 2 = urgent
 	{ "#151515", 	 "#ffffff", 	  "#444444" },  // 3 = occupied
 	{ "#151515", 	 "#151515", 	  "#e7ab65" },  // 4 = yellow
