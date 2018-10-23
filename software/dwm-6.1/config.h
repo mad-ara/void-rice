@@ -39,10 +39,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Pale moon"     ,  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Telegram"      ,  NULL,       NULL,       1 << 4,       0,           -1 },
-	{ "zathura"       ,  NULL,       NULL,       1 << 3,       0,           -1 },
-	{ "ranger"        ,  NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "pcmanfm"   	  ,  NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "Telegram"      ,  NULL,       NULL,       1 << 6,       0,           -1 },
+	{ "Firefox"       ,  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "keepassxc"     ,  NULL,       NULL,       1 << 4,       0,           -1 },
 	{ "neomutt"       ,  NULL,       NULL,       1 << 3,       0,           -1 },
 };
 
