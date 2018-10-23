@@ -44,6 +44,13 @@ flycheck_*.el
 # directory configuration
 .dir-locals.el
 
+# Binaries
+
+st
+dwm
+slock
+slstatus
+
 # Prerequisites
 *.d
 
