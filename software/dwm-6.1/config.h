@@ -38,13 +38,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "pcmanfm"   	  ,  NULL,       NULL,       1 << 5,       0,           -1 },
-	{ "Telegram"      ,  NULL,       NULL,       1 << 6,       0,           -1 },
-	{ "Firefox"       ,  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "keepassxc"     ,  NULL,       NULL,       1 << 4,       0,           -1 },
-	{ "neomutt"       ,  NULL,       NULL,       1 << 3,       0,           -1 },
-};
+	/* class      		instance    title       tags mask     isfloating   monitor */
+	{ "Wicd-client.py",  NULL, 		NULL, 		1 << 4,		  1,			-1 },
+	{ "pcmanfm"   	  ,  NULL,      NULL,       1 << 5,       1,			-1 },
+	{ "Telegram"      ,  NULL,      NULL,       1 << 6,       0,			-1 },
+	{ "Firefox"       ,  NULL,      NULL,       1 << 1,       0,			-1 },
+	{ "keepassxc"     ,  NULL,      NULL,       1 << 4,       1,			-1 }
+};			
 
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
@@ -85,6 +85,7 @@ static const char *volsuperup[] = { "amixer", "-q", "sset", "Master", "5%+", NUL
 static const char *muteall[]    = { "amixer", "-q", "sset", "Master", "toggle", NULL};
 static const char *cmus[]       = { "st", "-c", "cmus", NULL};
 static const char *cmuspause[]  = { "cmus-remote", "--pause", NULL};
+static const char *filemanager[]= { "pcmanfm", NULL};
 
 static Key keys[] = {
 	/* modifier             key        		function        argument */
@@ -107,6 +108,7 @@ static Key keys[] = {
 	{ MODKEY,            	XK_Return, 		spawn,          {.v = termcmd } },
 	{ MODKEY,            	XK_KP_Enter, 	spawn,          {.v = termcmd } },
 	{ MODKEY,               XK_c,      		spawn,          {.v = cmustatus } },
+	{ MODKEY,               XK_e,      		spawn,          {.v = filemanager } },
 	{ MODKEY,               XK_p,      		spawn,          {.v = dmenucmd } },
 	{ MODKEY,               XK_s,      		spawn,          SHCMD("import /tmp/file.png && xclip -sel clip -t image/png /tmp/file.png && rm /tmp/file.png") },
 	{ MODKEY,               XK_Print,  		spawn,          SHCMD("scrot -e 'mv $f ~/Pictures/scrot' && sleep 1 && exec notify-send 'screenshot has been saved in ~/Pictures/scrot'") },
