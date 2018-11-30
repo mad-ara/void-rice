@@ -39,7 +39,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      		instance    title       tags mask     isfloating   monitor */
-	{ "Wicd-client.py",  NULL, 		NULL, 		1 << 4,		  1,			-1 },
 	{ "pcmanfm"   	  ,  NULL,      NULL,       1 << 5,       1,			-1 },
 	{ "Telegram"      ,  NULL,      NULL,       1 << 6,       0,			-1 },
 	{ "Firefox"       ,  NULL,      NULL,       1 << 1,       0,			-1 },
@@ -75,17 +74,15 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]   = { "dmenu_run", "-i", "-l", "20", "-p", "Search >", "-fn", "tewi:size=11" , "-nb", "#151515", "-nf", "#cfcfcf", "-sb", "#BD3538", "-sf", "#222222", "-w", "0", "-h", "20", NULL };
+static const char *dmenucmd[]   = { "dmenu_run", "-i", "-l", "20", "-p", "Search >", "-fn", "Fira Code:style=Regular:size=10" , "-nb", "#151515", "-nf", "#cfcfcf", "-sb", "#BD3538", "-sf", "#222222", "-w", "0", "-h", "20", NULL };
 static const char *termcmd[]    = { "st", NULL };
-static const char *cmustatus[]  = { "cmus-status", NULL};
-static const char *voldown[]    = { "amixer", "-q", "sset", "Master", "2%-", NULL};
-static const char *volup[]      = { "amixer", "-q", "sset", "Master", "2%+", NULL};
-static const char *volsupdown[] = { "amixer", "-q", "sset", "Master", "5%-", NULL};
-static const char *volsuperup[] = { "amixer", "-q", "sset", "Master", "5%+", NULL};
-static const char *muteall[]    = { "amixer", "-q", "sset", "Master", "toggle", NULL};
+static const char *voldown[]    = { "pulsemixer", "--change-volume", "-5", NULL};
+static const char *volup[]      = { "pulsemixer", "--change-volume", "+5", NULL};
+static const char *mute[]    	= { "pulsemixer", "--toggle-mute", NULL};
 static const char *cmus[]       = { "st", "-c", "cmus", NULL};
-static const char *cmuspause[]  = { "cmus-remote", "--pause", NULL};
 static const char *filemanager[]= { "pcmanfm", NULL};
+static const char *lightdown[]	= {	"xbacklight", "-dec", "5", NULL};
+static const char *lightup[]	= {	"xbacklight", "-inc", "5", NULL};
 
 static Key keys[] = {
 	/* modifier             key        		function        argument */
@@ -107,7 +104,6 @@ static Key keys[] = {
 	{ MODKEY,               XK_period, 		focusmon,       {.i = +1 } },
 	{ MODKEY,            	XK_Return, 		spawn,          {.v = termcmd } },
 	{ MODKEY,            	XK_KP_Enter, 	spawn,          {.v = termcmd } },
-	{ MODKEY,               XK_c,      		spawn,          {.v = cmustatus } },
 	{ MODKEY,               XK_e,      		spawn,          {.v = filemanager } },
 	{ MODKEY,               XK_p,      		spawn,          {.v = dmenucmd } },
 	{ MODKEY,               XK_s,      		spawn,          SHCMD("import /tmp/file.png && xclip -sel clip -t image/png /tmp/file.png && rm /tmp/file.png") },
@@ -126,10 +122,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,     XK_Return, 		zoom,           {0} },
 	{ MODKEY|ShiftMask,     XK_s,      		spawn,          SHCMD("scrot 'xclip -selection clipboard -t image/png $f && rm -f $f'") },
 	{ MODKEY|ShiftMask,     XK_Print,  		spawn,          SHCMD("scrot -se 'mv $f ~/Pictures/scrot/' && sleep 1 && exec notify-send 'screenshot has been saved in ~/Pictures/scrot'") },
-	{ MODKEY|ShiftMask,     XK_p,      		spawn,          {.v = cmuspause } },
-	{ MODKEY|ShiftMask,     XK_m,      		spawn,          {.v = muteall } },
-	{ MODKEY|ShiftMask,     XK_equal,  		spawn,          {.v = volsuperup } },
-	{ MODKEY|ShiftMask,		XK_minus,  		spawn,          {.v = volsupdown } },
+	{ MODKEY|ShiftMask,     XK_m,      		spawn,          {.v = mute } },
+	{ MODKEY|ShiftMask,     XK_p,      		spawn,          SHCMD("dmenu-desktop --dmenu \"dmenu -i -l 20 -p \"Search >\" -fn tewi:size=11 -nb #151515 -nf #cfcfcf -sb #BD3538 -sf #222222 -w 0 -h 20\"") },
 	{ MODKEY|ShiftMask,     XK_Up,     		moveresize,     {.v = "0x 0y 0w -25h"} },
 	{ MODKEY|ShiftMask,     XK_Down,   		moveresize,     {.v = "0x 0y 0w 25h"} },
 	{ MODKEY|ShiftMask,     XK_Left,   		moveresize,     {.v = "0x 0y -25w 0h"} },
@@ -139,6 +133,11 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,   XK_m,      		spawn,          {.v = cmus } },
 	{ MODKEY|ControlMask,   XK_j,      		pushdown,       {0} },
 	{ MODKEY|ControlMask,   XK_k,      		pushup,         {0} },
+	{ MODKEY,				0x1008ff03,		spawn, 			{.v = lightdown }},
+	{ MODKEY,				0x1008ff02,		spawn,			{.v = lightup }},
+	{ MODKEY,				0x1008ff11,		spawn,			{.v = voldown }},
+	{ MODKEY,				0x1008ff13,		spawn,			{.v = volup }},
+	
 
 	TAGKEYS(                XK_1,      		                0)
 	TAGKEYS(                XK_2,      		                1)
