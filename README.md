@@ -1,5 +1,7 @@
 # void-rice
 
+![photo]()
+
 My lightweight Desktop Environment for Void Linux based on suckless tools.
 Includes a fully customized dwm fork with lot of patches applied such as  system tray support, sane keybindings and good mouse support out of the box.
 
