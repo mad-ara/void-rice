@@ -1,0 +1,31 @@
+# rice dependencies
+
+# dependencies needed to compile software/ 
+base-devel
+libX11-devel
+libXinerama-devel
+libXft-devel
+libXrandr-devel
+fontconfig-devel
+freetype-devel
+
+# fonts
+font-firacode
+font-Siji
+
+# big list of utilities
+
+# screenshot utility
+gscreenshot
+# lockscreen
+physlock
+# image viewer and background setter
+feh
+# gui for setting customizing gtk appearance
+lxappearance
+# nice gui file manager
+pcmanfm
+# hide mouse cursor when writing
+unclutter
+# nice gui to wpa_supplicant
+wpa_gui

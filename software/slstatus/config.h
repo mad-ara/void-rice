@@ -1,10 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 2000;
 
 /* text to show if no value can be retrieved */
-static const char unknown_str[] = "n/a";
+static const char unknown_str[] = "\ue0f7";
 
 /* maximum output string length */
 #define MAXLEN 2048
@@ -60,13 +60,17 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-   	/* function     format          				argument */
-	{ wifi_essid,	"\x05\ue219%s",					"wlp1s0"},
-	{ wifi_perc,	"/%s%% ",						"wlp1s0"},
-	{ battery_perc, "\x08\ue1ff %3s%% \x01",      	"BAT0" },
-	{ cpu_perc,		"\x02\ue1c0 %3s%% ",			NULL},
-	{ cpu_freq,		"%6shz "},
-	{ ram_used,		"\x06\ue028 %7s ", 				NULL},
-	{ datetime,     "\x01\ue1cd %s | ",	           	"%F" },
-	{ datetime,     "\ue016 %s ",	           		"%T" },
+       /* function     format          				argument */
+    { netspeed_tx,	"\x01\ue060%6s ",				"wlan0"},
+    { netspeed_rx,	"\ue061%6s ",					"wlan0"},
+    { disk_used,	"\x02\ue02b%s ",				"/" },
+    { wifi_essid,	"\x05\ue219%s ",				"wlan0"},
+    { wifi_perc,	"%s%% ",						"wlan0"},
+    { ipv4,			"%s ",							"wlan0"},
+    { battery_perc, "\x08\ue1ff%3s%% \x01",      	"BAT0" },
+    { cpu_perc,		"\x02\ue1c0%3s%% ",				NULL},
+    { cpu_freq,		"%6shz ", 						NULL},
+    { ram_used,		"\x06\ue028%7s ", 				NULL},
+    { datetime,     "\x01\ue1cd%s | ",	           	"%F" },
+    { datetime,     "\ue016%s ",	           		"%T" },
 };
