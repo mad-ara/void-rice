@@ -16,7 +16,7 @@ font-Siji
 # big list of utilities
 
 # screenshot utility
-gscreenshot
+scrot
 # lockscreen
 physlock
 # image viewer and background setter
@@ -27,5 +27,3 @@ lxappearance
 pcmanfm
 # hide mouse cursor when writing
 unclutter
-# nice gui to wpa_supplicant
-wpa_gui

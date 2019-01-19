@@ -30,3 +30,5 @@ cp vsv /usr/local/bin/vsv
 popd
 echo "Installing themes"
 cp -r .themes/* /usr/share/themes/
+echo "Install finished. Add software to .xinitrc to launch the DE with startx, \n
+or copy the provided .xinitrc file to your home directory (backup the old one!)"
