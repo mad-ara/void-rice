@@ -666,9 +666,11 @@ configurenotify(XEvent *e)
         if (updategeom() || dirty) {
             drw_resize(drw, sw, bh);
             updatebars();
-            //for (m = mons; m; m = m->next)
-                //XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, m->ww, bh);
-            resizebarwin(m);
+            for (m = mons; m; m = m->next) {
+                XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, m->ww, bh);
+                resizebarwin(m);
+            }
+            
             focus(NULL);
             arrange(NULL);
         }
@@ -1431,7 +1433,8 @@ resize(Client *c, int x, int y, int w, int h, int interact)
 
     void
 resizebarwin(Monitor *m) {
-	unsigned int w = m->ww;
+	//unsigned int w = m->ww;
+    int w = m->ww;
 	if (showsystray && m == systraytomon(m))
 		w -= getsystraywidth();
 	XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, w, bh);
