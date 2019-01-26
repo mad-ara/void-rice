@@ -8,9 +8,10 @@ Includes a fully customized dwm fork with lot of patches applied such as  system
 ## Downloading
 
 `git clone https://github.com/0x0f0f0f/void-rice`
+
 `cd void-rice`
 
-## Installation
+## Installing
 
 1) Fire up a text editor and edit `dependencies.txt` and config files in `software/` as you'd like. 
 2) Install dependencies by running `./install-dependencies.sh`. The script will simply read required packages from `dependencies.txt` and run xbps-install.
@@ -37,7 +38,7 @@ If you edit the configuration files you'll need to rebuild and reinstall:
 ./build.sh && sudo ./install.sh
 ```
 
-## Customized Software included in this repo
+## Forked Software included in this repo
 * [dwm](https://dwm.suckless.org/)
 * [st](https://st.suckless.org/)
 * [slstatus](https://tools.suckless.org/slstatus/)
@@ -47,5 +48,4 @@ If you edit the configuration files you'll need to rebuild and reinstall:
   
 
 ## Excluded packages you may like to install
-* `autorandr` to automatically manage multiple monitors
 * `icecat` GNU fork of firefox. Best browser out there.
