@@ -1,9 +1,9 @@
 #!/bin/bash
 
-pushd software/dwm-6.1
+pushd software/dwm
 echo "Compiling dwm"
 make clean && make
-popd && pushd software/dmenu-4.8
+popd && pushd software/dmenu
 echo "Compiling dmenu"
 make clean && make
 popd && pushd software/slstatus
