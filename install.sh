@@ -9,26 +9,33 @@ echo "Checking directories"
 mkdir -p /usr/local/bin/
 mkdir -p /usr/share/themes/
 
-pushd software/dwm-6.1
+pushd software/dwm
 echo "Installing dwm"
 make install
-popd && pushd software/dmenu-4.8
+
+popd && pushd software/dmenu
 echo "Installing dmenu"
 make install 
+
 popd && pushd software/slstatus
 echo "Installing slstatus"
 make install
+
 popd && pushd software/st
 echo "Installing st"
 make install
+
 popd && pushd software/vpm
 echo "Installing vpm"
 cp vpm /usr/local/bin/vpm
+
 popd && pushd software/vsv
 echo "Installing vsv"
 cp vsv /usr/local/bin/vsv
+
 popd
 echo "Installing themes"
-cp -r .themes/* /usr/share/themes/
-echo "Install finished. Add software to .xinitrc to launch the DE with startx, \n
+cp -r themes/Shades* /usr/share/themes/
+
+echo "Install finished. Add software to .xinitrc to launch the DE with startx,
 or copy the provided .xinitrc file to your home directory (backup the old one!)"
